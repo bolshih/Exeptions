@@ -1,8 +1,8 @@
 package ru.netology.Product;
 
-public class AlreadyExistsException extends RuntimeException{
+public class AlreadyExistsException extends RuntimeException {
 
-    public AlreadyExistsException(String s){
+    public AlreadyExistsException(String s) {
         super(s);
     }
 }

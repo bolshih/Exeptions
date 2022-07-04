@@ -10,7 +10,6 @@ public class Smartphone extends Product {
     }
 
     public String getManufacturer() {
-
         return manufacturer;
     }
 

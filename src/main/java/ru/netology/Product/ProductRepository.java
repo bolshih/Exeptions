@@ -6,21 +6,19 @@ public class ProductRepository {
 
 
     public void addProduct(Product product) {
-        if (findById(product.getId()) == null){
-        Product[] tmp = new Product[products.length + 1];
-        for (int i = 0; i < products.length; i++) {
-            tmp[i] = products[i];
-        }
-        tmp[tmp.length - 1] = product;
-        products = tmp;
-    }
-        else {
+        if (findById(product.getId()) == null) {
+            Product[] tmp = new Product[products.length + 1];
+            for (int i = 0; i < products.length; i++) {
+                tmp[i] = products[i];
+            }
+            tmp[tmp.length - 1] = product;
+            products = tmp;
+        } else {
             throw new AlreadyExistsException("Товар с id " + product.getId() + "уже существует");
         }
     }
 
     public Product[] getProducts() {
-
         return products;
     }
 
@@ -36,11 +34,11 @@ public class ProductRepository {
             }
             products = tmp;
             return products;
-        }
-        else{
+        } else {
             throw new NotFoundException("Товар с id " + id + " не найден");
         }
     }
+
     public Product findById(int id) {
         for (Product product : getProducts()) {
             if (product.getId() == id) {

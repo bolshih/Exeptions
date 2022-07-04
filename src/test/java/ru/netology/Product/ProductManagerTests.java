@@ -33,7 +33,7 @@ public class ProductManagerTests {
 
     @Test
 
-    public void shouldThrowsAlreadyExistsException(){
+    public void shouldThrowsAlreadyExistsException() {
 
         manager.addProduct(product1);
         manager.addProduct(product2);
